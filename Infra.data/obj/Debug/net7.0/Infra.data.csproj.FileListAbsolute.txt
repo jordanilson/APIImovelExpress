@@ -1,0 +1,17 @@
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\bin\Debug\net7.0\Infra.data.deps.json
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\bin\Debug\net7.0\Infra.data.runtimeconfig.json
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\bin\Debug\net7.0\Infra.data.dll
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\bin\Debug\net7.0\Infra.data.pdb
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\bin\Debug\net7.0\Domain.dll
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\bin\Debug\net7.0\Domain.pdb
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.csproj.AssemblyReference.cache
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.AssemblyInfoInputs.cache
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.AssemblyInfo.cs
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.csproj.CoreCompileInputs.cache
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.csproj.CopyComplete
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.dll
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\refint\Infra.data.dll
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.pdb
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\Infra.data.genruntimeconfig.cache
+C:\Users\Jordao\Desktop\ImovelExpress\APIImovelExpress\Infra.data\obj\Debug\net7.0\ref\Infra.data.dll
