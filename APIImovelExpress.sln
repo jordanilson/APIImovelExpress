@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "APIImovelExpress", "APIImovelExpress\APIImovelExpress.csproj", "{D9398FD1-CFC6-4C8A-B9A8-D20EEFE56109}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{E9749191-ED33-437E-B7E3-F5A6D6AE80C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{03C4E684-5A6E-4100-A43B-1AD5A6B62360}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.data", "Infra.data\Infra.data.csproj", "{365B27C0-8C37-49AA-9F2B-108182A6BC3A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra.ioc", "Infra.ioc\Infra.ioc.csproj", "{5C170F3A-CEF3-41BC-BD83-94AF236ECFE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiImovelExprexXUnit", "ApiImovelExprexXUnit\ApiImovelExprexXUnit.csproj", "{311FAAF1-5E5E-48A5-9433-A5EF528D964A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9398FD1-CFC6-4C8A-B9A8-D20EEFE56109}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9398FD1-CFC6-4C8A-B9A8-D20EEFE56109}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9398FD1-CFC6-4C8A-B9A8-D20EEFE56109}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9398FD1-CFC6-4C8A-B9A8-D20EEFE56109}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9749191-ED33-437E-B7E3-F5A6D6AE80C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9749191-ED33-437E-B7E3-F5A6D6AE80C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9749191-ED33-437E-B7E3-F5A6D6AE80C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9749191-ED33-437E-B7E3-F5A6D6AE80C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C4E684-5A6E-4100-A43B-1AD5A6B62360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C4E684-5A6E-4100-A43B-1AD5A6B62360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C4E684-5A6E-4100-A43B-1AD5A6B62360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C4E684-5A6E-4100-A43B-1AD5A6B62360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{365B27C0-8C37-49AA-9F2B-108182A6BC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365B27C0-8C37-49AA-9F2B-108182A6BC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365B27C0-8C37-49AA-9F2B-108182A6BC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365B27C0-8C37-49AA-9F2B-108182A6BC3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C170F3A-CEF3-41BC-BD83-94AF236ECFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C170F3A-CEF3-41BC-BD83-94AF236ECFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C170F3A-CEF3-41BC-BD83-94AF236ECFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C170F3A-CEF3-41BC-BD83-94AF236ECFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{311FAAF1-5E5E-48A5-9433-A5EF528D964A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{311FAAF1-5E5E-48A5-9433-A5EF528D964A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{311FAAF1-5E5E-48A5-9433-A5EF528D964A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{311FAAF1-5E5E-48A5-9433-A5EF528D964A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C185A80C-65DF-4B2D-8CC5-5F2A9166EC9F}
+	EndGlobalSection
+EndGlobal
