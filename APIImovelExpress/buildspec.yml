@@ -1,0 +1,13 @@
+﻿version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      dotnet: 7.0
+
+  build:
+    commands:
+      - echo "version:0.5\nruntime:aspnetcore\nbuild:\n  web: ./" > apprunner.yaml
+
+artifacts:
+  files: apprunner.yaml
