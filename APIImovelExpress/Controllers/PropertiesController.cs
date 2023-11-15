@@ -54,56 +54,62 @@ namespace API.Controllers
         [HttpPost]
         public async Task<ActionResult<PropertiesDTO>> PostProperties([FromForm] PropertiesDTO propertiesDTO)
         {
-            var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
-            if (userId == null)
+            try
             {
-                return Unauthorized("Usuário não autenticado.");
+                var userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+                if (userId == null)
+                {
+                    return Unauthorized("Usuário não autenticado.");
+                }
+
+                const string connectionStringName = "AzureStorage:ConnectionString";
+                const string containerNameName = "AzureStorage:ContainerName";
+
+                var connectionString = _configuration[connectionStringName];
+                var containerName = _configuration[containerNameName];
+
+                if (string.IsNullOrEmpty(connectionString) || string.IsNullOrEmpty(containerName))
+                {
+                    return BadRequest("Configuração incorreta.");
+                }
+
+                var blobServiceClient = new BlobServiceClient(connectionString);
+                var blobContainerClient = blobServiceClient.GetBlobContainerClient(containerName);
+
+                if (!await blobContainerClient.ExistsAsync())
+                {
+                    await blobContainerClient.CreateAsync();
+                }
+
+                var blobFileName = Guid.NewGuid().ToString() + Path.GetExtension(propertiesDTO.Photo.FileName);
+                var blobClient = blobContainerClient.GetBlobClient(blobFileName);
+
+                using (var stream = propertiesDTO.Photo.OpenReadStream())
+                {
+                    await blobClient.UploadAsync(stream, true);
+                }
+
+                propertiesDTO.ImgUrl = blobClient.Uri.ToString();
+                var property = new PropertiesDTO
+                {
+                    City = propertiesDTO.City,
+                    Price = propertiesDTO.Price,
+                    Availability = propertiesDTO.Availability,
+                    Amenities = propertiesDTO.Amenities,
+                    Name = propertiesDTO.Name,
+                    ImgUrl = blobClient.Uri.ToString(),
+                    Description = propertiesDTO.Description,
+                    OwnersId = userId
+                };
+
+                await _propertiesServices.CreatePropertiesAsyncById(property);
+                return Ok(propertiesDTO);
             }
-
-            const string connectionStringName = "AzureStorage:ConnectionString";
-            const string containerNameName = "AzureStorage:ContainerName";
-
-            var connectionString = _configuration[connectionStringName];
-            var containerName = _configuration[containerNameName];
-
-            if (string.IsNullOrEmpty(connectionString) || string.IsNullOrEmpty(containerName))
+            catch (Exception ex)
             {
-                return BadRequest("Configuração incorreta.");
+                return StatusCode(500, $"Erro interno no servidor: {ex.Message}");
             }
-
-            var blobServiceClient = new BlobServiceClient(connectionString);
-            var blobContainerClient = blobServiceClient.GetBlobContainerClient(containerName);
-
-            if (!await blobContainerClient.ExistsAsync())
-            {
-                await blobContainerClient.CreateAsync(PublicAccessType.Blob);
-            }
-
-            var blobFileName = Guid.NewGuid().ToString() + Path.GetExtension(propertiesDTO.Photo.FileName);
-            var blobClient = blobContainerClient.GetBlobClient(blobFileName);
-
-            using (var stream = propertiesDTO.Photo.OpenReadStream())
-            {
-                await blobClient.UploadAsync(stream, true);
-            }
-
-            propertiesDTO.ImgUrl = blobClient.Uri.ToString();
-            await blobContainerClient.SetAccessPolicyAsync(PublicAccessType.Blob);
-            var property = new PropertiesDTO
-            {
-                City = propertiesDTO.City,
-                Price = propertiesDTO.Price,
-                Availability = propertiesDTO.Availability,
-                Amenities = propertiesDTO.Amenities,
-                Name = propertiesDTO.Name,
-                ImgUrl = blobClient.Uri.ToString(),
-                Description = blobClient.Uri.ToString(),
-                OwnersId = userId
-            };
-
-            await _propertiesServices.CreatePropertiesAsyncById(property);
-            return Ok(propertiesDTO);
         }
 
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Policy = "Owners")]
