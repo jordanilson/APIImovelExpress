@@ -94,6 +94,7 @@ namespace API.Controllers
                 var property = new PropertiesDTO
                 {
                     City = propertiesDTO.City,
+                    State = propertiesDTO.State,
                     Price = propertiesDTO.Price,
                     Availability = propertiesDTO.Availability,
                     Amenities = propertiesDTO.Amenities,
