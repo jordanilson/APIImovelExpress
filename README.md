@@ -30,13 +30,13 @@ O ImovelExpress é uma API para o sistema de cadastro de reservas de casas e apa
 7. **Testes Unitários e Mocker:**
    - 🧪 Foram realizados testes unitários e mocker com xUnit.
 
-## Tecnologias Utilizadas
+## Tecnologias, Frameworks e Bibliotecas Utilizadas
 
 - ASP.NET ![ASP.NET](https://img.shields.io/badge/-ASP.NET-blue)
 - .NET 7 ![.NET 7](https://img.shields.io/badge/-.NET%207-blue)
 - AutoMapper ![AutoMapper](https://img.shields.io/badge/-AutoMapper-green)
 - Swagger ![Swagger](https://img.shields.io/badge/-Swagger-orange)
-- EntityFramework ![EntityFramework](https://img.shields.io/badge/-EntityFramework-purple)
+- EntityFramework ![EntityFramework](https://img.shields.io/badge/-EntityFramework-purple) etc...
 
 ## Deploy e Armazenamento
 
