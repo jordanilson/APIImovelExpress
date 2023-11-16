@@ -69,6 +69,7 @@ namespace Infra.data.Repositorys
                     updateProperties.Amenities = properties.Amenities;
                     updateProperties.Price = properties.Price;
                     updateProperties.City = properties.City;
+                    updateProperties.State = properties.State;
                     updateProperties.Name = properties.Name;
                     updateProperties.Description = properties.Description;
 
