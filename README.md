@@ -41,7 +41,7 @@ O ImovelExpress é uma API para o sistema de cadastro de reservas de casas e apa
 ## Deploy e Armazenamento
 
 8. **Azure Deployment:**
-   - ☁️ A API foi implantada na Azure.
+   - ☁️ A API foi implantada na Azure. [Link para o Swagger da API no Azure](https://apiimovelexpressproduction.azurewebsites.net/swagger)
 
 9. **Blob Storage:**
    - 📁 O Blob Storage da Azure é utilizado para armazenar as imagens.
@@ -50,6 +50,7 @@ O ImovelExpress é uma API para o sistema de cadastro de reservas de casas e apa
 
 10. **Integração com APIs de Pagamentos:**
     - 💳 Futuramente, a API terá integração com APIs de pagamentos.
+
 ## Instruções para Clone do Projeto
 
 - 📋 Clone o repositório:
@@ -67,9 +68,8 @@ O ImovelExpress é uma API para o sistema de cadastro de reservas de casas e apa
     ```bash
     dotnet run
     ```
+
 ## Como Contribuir
 
 11. **Contribuição:**
-    - 🤝 Contribuições são bem-vindas! 
-
-
+    - 🤝 Contribuições são bem-vindas!
