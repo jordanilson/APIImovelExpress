@@ -11,13 +11,9 @@ builder.Services.AddCors(opt => opt.AddPolicy("AllowRequest", builder => builder
 
 var app = builder.Build();
 
-// Configurar o middleware CORS no início
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+ app.UseSwagger();
+ app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseRouting();
