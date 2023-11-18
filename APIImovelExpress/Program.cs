@@ -12,8 +12,8 @@ builder.Services.AddCors(opt => opt.AddPolicy("AllowRequest", builder => builder
 var app = builder.Build();
 
 
- app.UseSwagger();
- app.UseSwaggerUI();
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseRouting();
